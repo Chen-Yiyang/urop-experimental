@@ -1,0 +1,4 @@
+## MixamoDownloader
+A simple js for mass-downloading resources from [Mixamo](https://www.mixamo.com/#/). It is based on [this repo](https://github.com/gnuton/mixamo_anims_downloader) that mass-downloads all the animations of one chosen character from Mixamo. With customisable parameters, the script supports downloading of multiple animations of multiple characters.
+
+In addition, the original script faces the problem when downloading meshes with texture - such resources are large files so multiple fetch requests are sent at the same time, and as a result, the Mixamo server will reject further requests causing downloads unsuccessful. A quick fix is to include a sleep promise after each download to avoid too many files being downloaded from the server at the same time.
